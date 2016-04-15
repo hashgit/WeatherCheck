@@ -5,6 +5,7 @@ using System.Web.Routing;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
+using WeatherCheck.Services;
 
 namespace WeatherCheck
 {
@@ -31,6 +32,9 @@ namespace WeatherCheck
 
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
             builder.RegisterApiControllers(typeof(MvcApplication).Assembly);
+
+            builder.RegisterType<CityService>().As<ICityService>().InstancePerRequest();
+            builder.RegisterType<WeatherService>().As<IWeatherService>().InstancePerRequest();
 
             return builder.Build();
         }
