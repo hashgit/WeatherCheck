@@ -15,18 +15,34 @@
 
         <div class="row">
             <div class="col-md-12">
-                <div class="form-group">
-                    <label class="control-label">Select a city</label>
-                    <select name="City" class="form-control" ng-model="City" ng-options="city.City group by city.Country for city in Cities" ng-change="loadWeather()"></select>
+                <div class="form-group" ng-show="!loadingCity">
+                    <div ng-show="Cities != null && Cities.length > 0">
+                        <label class="control-label">Select a city</label>
+                        <select name="City" class="form-control" ng-model="City" ng-options="city.City group by city.Country for city in Cities" ng-change="loadWeather()"></select>
+                    </div>
+                    <div ng-show="Cities == null || Cities.length == 0">
+                        <span>{{CityMessage}}</span>
+                    </div>
+                </div>
+                <div ng-show="loadingCity">
+                    <span class="glyphicon-globe glyphicon"></span>
                 </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-12">
-                <div class="form-group" ng-show="Country != null && Country.length > 3 && City != null">
+                <div class="form-group" ng-show="Weather != null">
                     <label class="control-label">Weather</label>
                     <span>{{Weather}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group" ng-show="ErrorMessage != null">
+                    <span>{{ErrorMessage}}</span>
                 </div>
             </div>
         </div>

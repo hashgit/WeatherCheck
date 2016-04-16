@@ -11,7 +11,7 @@ namespace WeatherCheck.Services
     {
         public async Task<string> GetWeather(string country, string city)
         {
-            var client = new GlobalWeather.GlobalWeatherSoapClient("GlobalWeatherSoap12");
+            var client = new GlobalWeather.GlobalWeatherSoapClient("GlobalWeatherSoap");
             var weather = await client.GetWeatherAsync(city, country);
 
             return weather;

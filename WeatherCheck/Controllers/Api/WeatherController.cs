@@ -24,9 +24,9 @@ namespace WeatherCheck.Controllers.Api
                 var result = await _weatherService.GetWeather(country, city);
                 return Ok(result);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return InternalServerError();
+                return InternalServerError(e);
             }
         }
     }

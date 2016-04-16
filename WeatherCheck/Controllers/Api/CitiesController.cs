@@ -23,9 +23,9 @@ namespace WeatherCheck.Controllers.Api
                 var cities = await _cityService.GetCities(country);
                 return Ok(cities);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return InternalServerError();
+                return InternalServerError(e);
             }
         }
     }
