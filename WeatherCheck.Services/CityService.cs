@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml.XPath;
+using WeatherCheck.Services.Dto;
 
 namespace WeatherCheck.Services
 {

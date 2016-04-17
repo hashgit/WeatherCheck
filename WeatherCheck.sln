@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherCheck", "WeatherCheck\WeatherCheck.csproj", "{71346D22-B738-467F-886F-E4C7E385E1B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherCheck.Services", "WeatherCheck.Services\WeatherCheck.Services.csproj", "{48D8AB77-E00C-43DF-91D6-5A84AFD29F77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherCheck.Tests", "WeatherCheck.Tests\WeatherCheck.Tests.csproj", "{7EE762B8-B4CB-49ED-B946-390A764721DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{48D8AB77-E00C-43DF-91D6-5A84AFD29F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48D8AB77-E00C-43DF-91D6-5A84AFD29F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48D8AB77-E00C-43DF-91D6-5A84AFD29F77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE762B8-B4CB-49ED-B946-390A764721DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE762B8-B4CB-49ED-B946-390A764721DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE762B8-B4CB-49ED-B946-390A764721DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE762B8-B4CB-49ED-B946-390A764721DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

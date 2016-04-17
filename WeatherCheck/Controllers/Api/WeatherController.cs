@@ -22,6 +22,9 @@ namespace WeatherCheck.Controllers.Api
             try
             {
                 var result = await _weatherService.GetWeather(country, city);
+                if (result == null)
+                    return NotFound();
+
                 return Ok(result);
             }
             catch (Exception e)

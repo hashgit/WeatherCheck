@@ -45,7 +45,10 @@
                 $scope.ErrorMessage = null;
             }, function (response) {
                 $scope.Weather = null;
-                $scope.ErrorMessage = response.data.ExceptionMessage;
+                if (response.status === 404)
+                    $scope.ErrorMessage = response.statusText;
+                else
+                    $scope.ErrorMessage = response.data.ExceptionMessage;
             });
         }
     };

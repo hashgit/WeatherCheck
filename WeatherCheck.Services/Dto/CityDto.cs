@@ -1,4 +1,4 @@
-namespace WeatherCheck.Services
+namespace WeatherCheck.Services.Dto
 {
     public class CityDto
     {
